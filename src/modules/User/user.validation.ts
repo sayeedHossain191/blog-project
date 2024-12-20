@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const userValidationSchema = z.object({
+const userValidationSchema = z.object({
   name: z
     .string()
     .trim()
@@ -26,6 +26,6 @@ export const userValidationSchema = z.object({
   updatedAt: z.date().optional(),
 });
 
-const UserValidation = {
+export const UserValidation = {
   userValidationSchema,
 };
