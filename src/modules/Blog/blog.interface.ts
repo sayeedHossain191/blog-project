@@ -5,8 +5,8 @@ import { Types } from "mongoose";
 export interface TBlog {
   title: string;
   content: string;
-  author: Types.ObjectId;
+  author: Types.ObjectId; // Reference to the User model
   isPublished: boolean;
-  createdAt: Date;
-  updatedAt: Date;
+  // createdAt: Date;
+  // updatedAt: Date;
 }

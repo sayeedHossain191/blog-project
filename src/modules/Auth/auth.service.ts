@@ -32,7 +32,7 @@ const login = async (payload: { email: string; password: string }) => {
   );
 
   if (!isPasswordMatched) {
-    throw new Error("Wrong Password!!! Tell me who are you? 😈");
+    throw new Error("Wrong Password!!!");
   }
 
   //create token and sent to the  client

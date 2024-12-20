@@ -9,9 +9,9 @@ export const blogValidationSchema = z.object({
 
   isPublished: z.boolean().optional(),
 
-  createdAt: z.date().optional(),
+  // createdAt: z.date().optional(),
 
-  updatedAt: z.date().optional(),
+  // updatedAt: z.date().optional(),
 });
 
 export const blogValidation = {
