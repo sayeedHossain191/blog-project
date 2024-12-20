@@ -25,6 +25,8 @@ const userSchema = new Schema<TUser>({
   role: {
     type: String,
     enum: ["admin", "user"],
+    required: true,
+    default: "user",
   },
   isBlocked: {
     type: Boolean,
@@ -56,25 +58,5 @@ userSchema.post("save", function (doc, next) {
   doc.password = "";
   next();
 });
-
-// userSchema.statics.isUserExistsByCustomId = async function (id: string) {
-//   return await User.findOne({ id }).select("+password");
-// };
-
-// userSchema.statics.isPasswordMatched = async function (
-//   plainTextPassword,
-//   hashedPassword
-// ) {
-//   return await bcrypt.compare(plainTextPassword, hashedPassword);
-// };
-
-// userSchema.statics.isJWTIssuedBeforePasswordChanged = function (
-//   passwordChangedTimestamp: Date,
-//   jwtIssuedTimestamp: number
-// ) {
-//   const passwordChangedTime =
-//     new Date(passwordChangedTimestamp).getTime() / 1000;
-//   return passwordChangedTime > jwtIssuedTimestamp;
-// };
 
 export const User = model<TUser>("User", userSchema);
