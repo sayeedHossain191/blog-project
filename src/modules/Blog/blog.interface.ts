@@ -6,7 +6,7 @@ export interface TBlog {
   title: string;
   content: string;
   author: Types.ObjectId; // Reference to the User model
-  isPublished: boolean;
+  isPublished?: boolean;
   // createdAt: Date;
   // updatedAt: Date;
 }

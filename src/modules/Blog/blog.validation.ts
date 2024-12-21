@@ -5,7 +5,7 @@ export const blogValidationSchema = z.object({
 
   content: z.string().min(1, { message: "content is required." }),
 
-  author: z.string().min(1, { message: "Author id is required." }),
+  // author: z.string().min(1, { message: "Author id is required." }),
 
   isPublished: z.boolean().optional(),
 
